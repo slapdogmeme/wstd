@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Slapped The Dog?</title>
+    <link rel="icon" href="whoslappedthedog.png" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #008080;
+            font-family: Tahoma, sans-serif;
+        }
+        .window {
+            border: 3px solid #000;
+            background-color: #c0c0c0;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .title-bar {
+            background: linear-gradient(to right, #000080, #104E8B);
+            color: white;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .title{
+            font-size: 25px;
+        }
+        .buttons button {
+            background-color: #c0c0c0;
+            border: 1px solid black;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-weight: 900;
+            padding: 2px;
+            font-size: 15px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        .dog-image {
+            width: 200px;
+            height: auto;
+        }
+        .slap-message {
+            font-weight: bold;
+            color: red;
+            margin-top: 10px;
+        }
+        .footer {
+            text-align: center;
+            color: white;
+        }
+        .full-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        #main-window{
+            border: 3px solid #000;
+            background-color: #c0c0c0;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        .xp-window {
+            border: 2px solid #00008b;
+            padding: 12px;
+        }
+        @keyframes slide {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+            }
+
+            .meme-container {
+            overflow: hidden;
+            background-color: #000080;
+            padding: 10px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            }
+
+            .meme-track {
+            display: flex;
+            gap: 20px; /* Khoảng cách giữa các hình */
+            animation: slide 25s linear infinite;
+            }
+
+            .meme-image {
+            height: 200px;
+            border: 2px solid white;
+            flex-shrink: 0;
+            }
+    </style>
+</head>
+<body>
+    <script src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js"></script>
+    <gecko-coin-price-marquee-widget locale="en" coin-ids="dogecoin,shiba-inu,bonk,dogwifcoin" initial-currency="usd"></gecko-coin-price-marquee-widget>
+    <div id="main-window">
+        <div class="title-bar">
+            <span class="title">Who Slapped The Dog?</span>
+            <div class="buttons">
+                <button class="minimize">_</button>
+                <button class="maximize">□</button>
+                <button class="close">X</button>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Help me find the culprit</h1>
+            <h1>Who Slapped The Dog?</h1>
+            <!-- <p>Discover the mystery behind the biggest meme conspiracy.</p> -->
+            <div class="full-wrapper">
+                <img src="https://media1.tenor.com/m/7xTBGhsV_zMAAAAC/slap-dog-slap-shiba.gif" alt="Shiba Inu" class="dog-image" id="dog-image">
+                <button onclick="slapDog()" style="margin-top: 12px;width: 200px; cursor: pointer;">
+                    <h1 style="margin: 0;">Slap it 🩴</h1>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <section class="meme-container">
+        <div class="meme-track">
+            <img src="https://media0.giphy.com/media/vwgnc2N5ii5pgkOQEg/giphy.gif?cid=6c09b952ea92d2rl8ut0cmdqi2ihfknvqquq7zpc3nqj6lci&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="Shiba Dog Slap" class="meme-image">
+            <img src="https://media.tenor.com/Pl-D-O0K7H4AAAAM/slap-dog-slap.gif" alt="Shiba Dog Slap" class="meme-image">
+            <img src="https://media.tenor.com/WbM_dT5u5wIAAAAM/dog-smack.gif" alt="Shiba Dog Slap" class="meme-image">
+            <img src="https://media.tenor.com/RA6gBtA2n5sAAAAM/plnkfr1day-dogs.gif" alt="Shiba Dog Slap" class="meme-image">
+            <img src="https://media.tenor.com/BSseACvk04QAAAAM/cat-dog.gif" alt="Shiba Dog Slap" class="meme-image">
+            <img src="https://media.tenor.com/8oCMgnV76mMAAAAM/bullish-degen.gif" alt="Shiba Dog Slap" class="meme-image">
+            <img src="https://media0.giphy.com/media/vwgnc2N5ii5pgkOQEg/giphy.gif?cid=6c09b952ea92d2rl8ut0cmdqi2ihfknvqquq7zpc3nqj6lci&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="Shiba Dog Slap" class="meme-image">
+            <img src="https://media.tenor.com/Pl-D-O0K7H4AAAAM/slap-dog-slap.gif" alt="Shiba Dog Slap" class="meme-image">
+            <img src="https://media.tenor.com/WbM_dT5u5wIAAAAM/dog-smack.gif" alt="Shiba Dog Slap" class="meme-image">
+            <img src="https://media.tenor.com/RA6gBtA2n5sAAAAM/plnkfr1day-dogs.gif" alt="Shiba Dog Slap" class="meme-image">
+            <img src="https://media.tenor.com/BSseACvk04QAAAAM/cat-dog.gif" alt="Shiba Dog Slap" class="meme-image">
+            <img src="https://media.tenor.com/8oCMgnV76mMAAAAM/bullish-degen.gif" alt="Shiba Dog Slap" class="meme-image">
+        </div>
+    </section>
+    
+    <div class="window hidden" id="message-window">
+        <div class="title-bar">
+            <span class="title">Message Box</span>
+            <div class="buttons">
+                <button class="close" onclick="closePopup('message-window')">X</button>
+            </div>
+        </div>
+        <div class="content">
+            <p class="slap-message" id="slap-message"></p>
+        </div>
+    </div>
+
+    <div id="backstory-window" style="margin-top: 20px;">
+        <div class="xp-window">
+            <div class="">
+                <p><strong>The Origin of the Slap – A Dog's Awakening</strong></p>
+                <p>In a world dominated by meme dogs like <strong>Dogecoin</strong>, <strong>Shiba Inu</strong>, <strong>Bonk</strong>, and even the infamous <strong>Dogwifhat</strong>, there's one question everyone’s secretly asking: <em>Who’s the top dog in the meme game?</em> It’s a battle of supremacy—fueled by crypto and endless cat videos. But little did they know, there was something <em>far</em> more important happening behind the scenes.</p>
+                <p>One day, during the most epic meme dog party ever thrown in the "PumpVerse" (the universe where memes go to retire), something bizarre happened: <strong>A slap</strong>—yes, you read that right—echoed across the digital world. A dog got slapped. And no one knew who did it, why it happened, or if the slap had been verified by the blockchain.</p>
+                <p>The dog who got slapped (our <em>brave</em> hero) was left feeling utterly betrayed. “Why me? I’m just a meme! Who did this? Am I not <em>worthy</em> of a meme crown?” And with that, this dog decided to embark on a mission to find the <strong>slapper</strong> and make them answer for their <em>digital crime</em>. After all, no meme dog gets left behind... especially not one that’s been slapped!</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="justice-window">
+            <div class="content" style="background: #c0c0c070;padding: 12px 0;margin-top: 12px;">
+                <p style="text-decoration: underline; color: #041683; font-weight: bold;">#WhoSlappedTheDog #JusticeForMemes #SLAP</p>
+                <p>Join the movement to uncover the truth behind the slap.</p>
+                <p style="color: #fff;">Discover the mystery behind the biggest meme conspiracy.</p>
+                <p>Follow us on <a href="https://x.com/DogSlapMeme"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X-Social icon" width="20px"></a></p>
+            </div>
+    </div>
+    
+    <div class="window hidden" id="nft-window">
+        <div class="content">
+            <p>Own a piece of meme history! Exclusive NFTs of the legendary slap.</p>
+        </div>
+    </div>
+    
+    <div class="footer" style="color: #a5a4a4;">
+        <p>Legal Disclaimer: $SLAP is a meme coin with no intrinsic value or expectation of financial return. $SLAP is for entertainment purposes only. When you purchase $SLAP , you are agreeing that you have seen this disclaimer.</p>
+    </div>
+
+    <script>
+        function showPopup(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+        function closePopup(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+        function slapDog() {
+            const messages = [
+                "Ah, so you were the one who slapped it!",
+                "I finally found out who slapped the dog!",
+                "Nooo! Why did you slap me?!",
+                "This dog will have its revenge... watch out!",
+                "You’ve made a grave mistake... this dog never forgets!",
+                "Nooo! You’ve activated the dog's revenge mode!",
+                "Run now! A pack of dogs is coming for revenge!",
+                "Why did you slap me? I’m just an innocent dog!",
+                "Think you can slap me and run away? Not so fast, human!",
+                "I will remember this forever… until I get my revenge!",
+                "The dog has added you to its list of enemies to deal with!",
+                "Be careful! Tonight, while you sleep… I’ll be waiting under your bed!",
+                "You think slapping me is the end? I will summon all the dogs for revenge!",
+                "You dare challenge the legendary canine warrior? Prepare for your fate!",
+                "This isn’t over... the dog mafia will hear about this!",
+                "One slap, one lifetime of regret... remember that, human!",
+                "Oh, you messed up big time. My tail may wag, but my vengeance won't!",
+                "You slap me now, but soon you'll wake up surrounded by bones... and not the tasty kind!",
+                "I shall bark at 3 AM every night... until my revenge is complete!",
+                "You have made a powerful enemy today. Sleep with one eye open!",
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('slap-message').innerText = randomMessage;
+            showPopup('message-window');
+        }
+        
+    </script>
+</body>
+</html>
